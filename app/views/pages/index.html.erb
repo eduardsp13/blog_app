@@ -1,0 +1,12 @@
+	<h1>index blog</h1>
+	<ul>
+		<% @users.each do |user| %>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Profile</div>
+  <div class="card-body">
+    <h5 class="card-title"><%= "#{user.fname} #{user.lname}" %></h5>
+    <p class="card-text"><%=user.email %></p>
+  </div>
+</div>
+<% end %>
+	<%= link_to 'about', about_path, class: "btn btn-primary" %>
